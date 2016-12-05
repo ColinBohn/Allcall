@@ -16,6 +16,12 @@ app.logger.setLevel(logging.INFO)
 app.logger.addHandler(handler)
 
 
+@app.route('/')
+@app.route('/ping')
+def ping():
+    js = '{"status":"success", "reason":"pong"}'
+    return Response(js, status=200, mimetype='application/json')
+
 @app.route('/start/')
 @app.route('/start/<alert>')
 @app.route('/start/<alert>/<int:delay>')
