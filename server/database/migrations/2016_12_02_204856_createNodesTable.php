@@ -16,7 +16,8 @@ class CreateNodesTable extends Migration
         Schema::create('nodes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('hostname');
+            $table->string('url');
+            $table->string('key');
             $table->timestamps();
         });
     }

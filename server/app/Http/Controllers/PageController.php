@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Node;
+use App\Alert;
 
 class PageController extends Controller
 {
@@ -30,8 +31,9 @@ class PageController extends Controller
 
     public function broadcast()
     {
+        $alerts = Alert::all();
         $nodes = Node::all();
-        return view('broadcast', compact('nodes'));
+        return view('broadcast', compact('nodes', 'alerts'));
     }
 
 }

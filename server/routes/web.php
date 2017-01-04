@@ -22,5 +22,10 @@ Route::get('/', function () {
 Route::get('/home', 'PageController@index');
 Route::get('/broadcast', 'PageController@broadcast');
 
-Route::get('/node/{node}/test/', 'NodeController@test');
-Route::get('/node/{node}/stop/', 'NodeController@stop');
+Route::get('/nodes/{node}/online', 'NodeController@online');
+Route::get('/nodes/{node}/status', 'NodeController@status');
+Route::resource('nodes', 'NodeController');
+
+Route::post('/start/{alert}', 'PlaybackController@start');
+Route::post('/stop', 'PlaybackController@stop');
+Route::resource('alerts', 'AlertController');

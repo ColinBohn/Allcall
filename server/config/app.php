@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Emergency Alert System',
+    'name' => 'Allcall',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,6 +168,7 @@ return [
          */
         Adldap\Laravel\AdldapServiceProvider::class,
         Adldap\Laravel\AdldapAuthServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
         
         /*
          * Application Service Providers...

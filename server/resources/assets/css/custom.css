@@ -1,0 +1,19 @@
+.glyphicon-rotate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+div.navbar-header a.navbar-brand {
+    font-family: 'Comfortaa', 'Open Sans', sans-serif;
+    font-size: 24px;
+    color: #19abff;
+}

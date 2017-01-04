@@ -8,10 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'allcall') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/all.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -36,14 +37,16 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ strtolower(config('app.name', 'allcall')) }}
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="/broadcast">Broadcast</a></li>
+                        <li><a href="/nodes">Nodes</a></li>
+                        <li><a href="/alerts">Alerts</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,11 +79,11 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="/js/all.js"></script>
+    @yield('scripts')
 </body>
 </html>
