@@ -21,13 +21,13 @@ class AlertTableSeeder extends Seeder
             'name' => 'Lockdown',
             'shortname' => 'lockdown',
             'description' => 'Lockdown. All staff begin emergency full lockdown procedures. All students return to the nearest secured area. The campus is closed to all new arrivals. We are now in full lockdown.',
-            'loop_delay' => 5,
+            'loop_delay' => 30,
         ]);
         DB::table('alerts')->insert([
             'name' => 'Modified Lockdown',
             'shortname' => 'mod_lockdown',
             'description' => 'Modified lockdown. All students and staff begin modified lockdown procedures. The campus is closed to all new arrivals. We are now in modified lockdown.',
-            'loop_delay' => 5,
+            'loop_delay' => 60,
         ]);
         DB::table('alerts')->insert([
             'name' => 'Evacuate',
@@ -39,7 +39,7 @@ class AlertTableSeeder extends Seeder
             'name' => 'Shelter In Place',
             'shortname' => 'shelter',
             'description' => 'Shelter in place. Seek indoor shelter now. Shutdown all heating, ventilation, and air conditioning systems. Close and cover all doors, windows, and air vents.',
-            'loop_delay' => 5,
+            'loop_delay' => 30,
         ]);
         DB::table('alerts')->insert([
             'name' => 'Earthquake',
@@ -51,7 +51,7 @@ class AlertTableSeeder extends Seeder
             'name' => 'Armed Intruder',
             'shortname' => 'armed_intruder',
             'description' => 'Armed intruder reported on campus. Immediately take shelter where you are. Lock doors, turn off lights, and stay away from windows.',
-            'loop_delay' => 5,
+            'loop_delay' => 60,
         ]);
         DB::table('alerts')->insert([
             'name' => 'All Clear',

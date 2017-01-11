@@ -11,7 +11,7 @@
                         <ul class="list-group">
         @foreach ($nodes as $node)
                             <li class="list-group-item" data-node="{{ $node->id }}">
-                            <input type="checkbox" name="nodes[]" data-toggle="toggle" data-size="small" value=" {{ $node->id }}">
+                            <input type="checkbox" name="nodes[]" data-toggle="toggle" data-size="small" value="{{ $node->id }}" disabled>
                                 {{ $node->name }}
                                 <div class="pull-right">
                                     <span class="label label-default">

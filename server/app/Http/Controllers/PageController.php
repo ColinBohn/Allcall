@@ -8,25 +8,16 @@ use App\Alert;
 
 class PageController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function logs()
     {
-        $nodes = Node::all();
-        return view('home', compact('nodes'));
+        $logs = Log::orderBy('created_at', 'desc')->get();;
+        return view('logs', compact('logs'));
     }
 
     public function broadcast()
@@ -35,5 +26,4 @@ class PageController extends Controller
         $nodes = Node::all();
         return view('broadcast', compact('nodes', 'alerts'));
     }
-
 }

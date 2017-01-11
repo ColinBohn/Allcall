@@ -19,8 +19,10 @@ Route::get('/', function () {
     return redirect('/login');
 });
 
-Route::get('/home', 'PageController@index');
-Route::get('/broadcast', 'PageController@broadcast');
+
+Route::get('/broadcast', 'PageController@broadcast')->name('broadcast');
+Route::get('/logs', 'LogController@index')->name('logs');
+
 
 Route::get('/nodes/{node}/online', 'NodeController@online');
 Route::get('/nodes/{node}/status', 'NodeController@status');

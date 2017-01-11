@@ -101,4 +101,16 @@ div.navbar-header a.navbar-brand {
     font-size: 24px;
     color: #19abff;
 }
+.logo {
+    font-family: 'Comfortaa', 'Open Sans', sans-serif;
+    font-size: 64px;
+    color: #19abff;
+    text-align: center;
+    line-height: 70px;
+    margin-top: 20px;
+}
+.logo-sub {
+    margin-bottom: 20px;
+    text-align: center;
+}
 /*# sourceMappingURL=all.css.map */

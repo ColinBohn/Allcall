@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Node;
 use App\Alert;
+use App\Log;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
@@ -21,6 +23,7 @@ class PlaybackController extends Controller
             return redirect('/broadcast');
         }
         $nodes = Node::find($checked);
+        $locations = [];
         foreach ($nodes as $node) {
             $client = new Client();  
             $res = $client->request('GET', 
@@ -30,7 +33,13 @@ class PlaybackController extends Controller
                     ['connect_timeout' => 3,
                     'headers' => ['X-AllCall-Key' => $node->key]
                     ]);
+                    $locations[] = $node->name;
         }
+        $log = new Log;
+        $log->username = Auth::user()->name;
+        $log->locations = implode(", ", $locations);
+        $log->action = "START " . $alert->name;
+        $log->save();
         return redirect('/broadcast');
     }
     
@@ -41,6 +50,7 @@ class PlaybackController extends Controller
             return redirect('/broadcast');
         }
         $nodes = Node::find($checked);
+        $locations = [];
         foreach ($nodes as $node) {
             $client = new Client();
             $res = $client->request('GET',
@@ -48,7 +58,13 @@ class PlaybackController extends Controller
                     ['connect_timeout' => 3,
                     'headers' => ['X-AllCall-Key' => $node->key]
                     ]);
+                    $locations[] = $node->name;
         }
+        $log = new Log;
+        $log->username = Auth::user()->name;
+        $log->locations = implode(", ", $locations);
+        $log->action = "STOP";
+        $log->save();
         return redirect('/broadcast');
     }
 }
