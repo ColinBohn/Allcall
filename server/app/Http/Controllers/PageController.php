@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Node;
 use App\Alert;
+use App\Log;
 
 class PageController extends Controller
 {

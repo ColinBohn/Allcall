@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 
 Route::get('/broadcast', 'PageController@broadcast')->name('broadcast');
-Route::get('/logs', 'LogController@index')->name('logs');
+Route::get('/logs', 'PageController@logs')->name('logs');
 
 
 Route::get('/nodes/{node}/online', 'NodeController@online');
