@@ -47,6 +47,13 @@
             p {
                 font-size: 18px;
                 padding-top: 10px;
+                color: #555;
+            }
+            .footer {
+                margin-top: 15px;
+                padding: 15px;
+                border-top: solid 1px #ccc;
+                color: #aaa;
             }
         </style>
     </head>
@@ -76,6 +83,7 @@
             <p>The control server uses PHP, and is built with Laravel. The server is responsible for providing the user interface, maintaining a database of nodes and audio alerts, and initiating and stopping playback on nodes.</p>
             <h3>About Nodes</h3>
             <p>The node client uses Python, and is built with Flask. The client is responsible for providing a physical connection for audio to playback on a typical public announcement system, and is usually installed on a small computer such as a Raspberry Pi. We recommend using <a href="http://resin.io">Resin.io</a> for node management.</p>
+            <div class="footer">Created by Colin Bohn under MIT license</div>
         </div>
     </body>
 </html>
