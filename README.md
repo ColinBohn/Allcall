@@ -1,7 +1,7 @@
 # Allcall
 
 
-View the full docs at <https://allcall.io>.
+View the full docs at <http://allcall.io>.
 
 ## What is Allcall?
 Allcall is an open-source project that leverages modern web technologies to provide a web-based interface for playback of audio alerts across multiple physical locations.
