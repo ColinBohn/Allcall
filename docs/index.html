@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>allcall</title>
+        <meta name="description" content="Distributed audio broadcasting system for public campus alerts.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:300,400" rel="stylesheet">
+        <style>
+            body {
+                background-color: #f4f4f4;
+                font-family: 'Open Sans', sans-serif;
+            }
+            .header {
+                padding: 40px 0;
+                background-color: #19abff;
+                text-align: center;
+                color: white;
+            }
+            .title {
+                font-family: 'Comfortaa', 'Open Sans', sans-serif;
+                font-size: 82px;
+                text-align: center;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .desc {
+                font-size: 26px;
+                font-weight: 300;
+            }
+            .line-1 {
+                border: 5px solid #0be;
+                margin: 0;
+                padding: 0;
+            }
+            .line-2 {
+                border: 5px solid #3cf;
+                margin: 0;
+                padding: 0;                               
+            }
+            .line-3 {
+                border: 5px solid #6ff;
+                margin: 0;
+                padding: 0;  
+            }
+            p {
+                font-size: 18px;
+                padding-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row header">
+            <div class="col-md-12">
+                <div class="title">allcall</div>
+                <div class="desc">A modern, open source public announcement system.</div>
+            </div>
+        </div>
+        <hr class="line-1">
+        <hr class="line-2">
+        <hr class="line-3">
+        <div class="container">
+        <h1>What is Allcall?</h1>
+        <p>Allcall is an open-source project that leverages modern web technologies to provide a web-based interface for playback of audio alerts across multiple physical locations.
+        <h1>What is Allcall used for?</h1>
+        <p>Allcall is useful for school campuses, dormitories, businesses, and other spaces that require the ability to play an audio file on multiple audio systems from one interface. This is commonly used for lockdowns, evacuations, and other emergency instructions, but could be applied for many other purposes as well.
+        <h1>How does Allcall work?</h1>
+        <p>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <img class="img-responsive" src="allcall.svg" alt="Diagram of allcall functions" />
+            </div>
+        </div>
+        <p>Allcall consists of a single control server, and many nodes each connected to an audio system. A user can login to the Allcall interface, select an audio file, and then select which nodes to playback on. This will initiate a secure request to each node to begin playback, and then show a live status of which nodes have successfully responded to the request.
+        <h2>About The Server</h2>
+        <p>The control server uses PHP, and is built with Laravel. The server is responsible for providing the user interface, maintaining a database of nodes and audio alerts, and initiating and stopping playback on nodes.
+        <h2>About Nodes</h2>
+        <p>The node client uses Python, and is built with Flask. The client is responsible for providing a physical connection for audio to playback on a typical public announcement system, and is usually installed on a small computer such as a Raspberry Pi. We recommend using <a href="http://resin.io">Resin.io</a> for node management.
+        </p>
+    </body>
+</html>
