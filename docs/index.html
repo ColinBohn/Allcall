@@ -55,6 +55,8 @@
             <div class="col-md-12">
                 <div class="title">allcall</div>
                 <div class="desc">A modern, open source public announcement system.</div>
+                <br />
+                <a class="btn btn-lg btn-primary" href="https://wwww.github.com/ColinBohn/Allcall">View on GitHub</a>
             </div>
         </div>
         <hr class="line-1">
@@ -73,9 +75,9 @@
             </div>
         </div>
         <p>Allcall consists of a single control server, and many nodes each connected to an audio system. A user can login to the Allcall interface, select an audio file, and then select which nodes to playback on. This will initiate a secure request to each node to begin playback, and then show a live status of which nodes have successfully responded to the request.
-        <h2>About The Server</h2>
+        <h3>About The Server</h3>
         <p>The control server uses PHP, and is built with Laravel. The server is responsible for providing the user interface, maintaining a database of nodes and audio alerts, and initiating and stopping playback on nodes.
-        <h2>About Nodes</h2>
+        <h3>About Nodes</h3>
         <p>The node client uses Python, and is built with Flask. The client is responsible for providing a physical connection for audio to playback on a typical public announcement system, and is usually installed on a small computer such as a Raspberry Pi. We recommend using <a href="http://resin.io">Resin.io</a> for node management.
         </p>
     </body>
