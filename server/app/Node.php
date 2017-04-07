@@ -13,7 +13,7 @@ class Node extends Model
         try {
             $client = new Client(['exceptions' => false]);
             $res = $client->request('GET', $this->url.'/ping',
-                    ['connect_timeout' => 1,
+                    ['timeout' => 2,
                     'headers' => ['X-AllCall-Key' => $this->key]
                     ]);
             if ($res->getStatusCode() == 200)
@@ -29,7 +29,7 @@ class Node extends Model
         try {
             $client = new Client(['exceptions' => false]);
             $res = $client->request('GET', $this->url.'/status',
-                    ['connect_timeout' => 1,
+                    ['timeout' => 2,
                     'headers' => ['X-AllCall-Key' => $this->key]
                     ]);
             if ($res->getStatusCode() == 200)
