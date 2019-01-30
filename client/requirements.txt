@@ -1,2 +1,2 @@
-Flask==0.11.1
+flask==0.12.3
 simpleaudio==1.0.1
